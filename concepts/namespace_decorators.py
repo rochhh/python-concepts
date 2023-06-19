@@ -8,8 +8,6 @@ the built-in print func get overridden and hence the error
 
 # print("hello")
 
-
-
 ''' print result: inner -> outer -> main '''
 
 def outer():
@@ -26,3 +24,13 @@ print(outer())
 print('main program -> global scope')
 
 # outer() -> inner() -> _ifls_ -> 11 -> _ofgs_ -> main
+
+#  just like global we have nonlocal (for enclosed n inner func just like a func and global )
+
+l = [1,2,3]
+print( "max is the value ->" , max(l)) # prints fine 
+
+def max():
+    print("salut")
+
+print(max(l)) # throws err
