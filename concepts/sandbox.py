@@ -1,5 +1,6 @@
-L = [1,2,3]
+s1 = {2,3,4}
+s2 = {2,5,6}
 
-a=next(L)
+x ,= s2.intersection(s1)
 
-print(type(a))
+print(x)
