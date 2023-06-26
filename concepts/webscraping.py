@@ -1,8 +1,9 @@
-import webbrowser , sys 
+import requests , bs4
 
+res = requests.get("https://nostarch.com")
 
-if len(sys.argv) > 1:
-    address = ' '.join(sys.argv[1:])
-    webbrowser.open(f"https://www.google.com/maps/place/' + {address}")
-else:
-    print("nigga")
+no_starch_soup = bs4.BeautifulSoup(res.text , 'html.parser')
+
+elems = no_starch_soup.select('div')
+
+print(str(elems[0]))
