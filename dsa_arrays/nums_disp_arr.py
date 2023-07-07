@@ -1,8 +1,12 @@
-def solution():
-    pass
+def solution(nums):
+    set_nums = set(nums)
+    missing = []
 
+    for i in range( 1, len(nums)+1 ):
+        if i not in set_nums:
+            missing.append(i)
+    return missing
 
-arr = [1,2,3,4]
+arr = [4,3,2,7,8,2,3,1]
 
-for n in (arr):
-    print(f"{ n }")
+print(solution(arr))
