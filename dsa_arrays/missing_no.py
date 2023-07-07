@@ -24,3 +24,16 @@ def sol2(arr):
     return res
 
 print(sol2( arr))
+
+
+def sol3(arr):
+
+    n = len(arr)
+
+    total = ( n * (n-1) ) // 2
+
+    for i in arr:
+
+        total = total - i
+
+    return total
