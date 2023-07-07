@@ -12,5 +12,15 @@ def helper(arr):
 
 arr = [0,1,2,3,4,6]
 
-print(helper( arr))
+# print(helper( arr))
 
+
+def sol2(arr):
+    len_n = len(arr)
+    res = len_n
+
+    for i in range(len_n):
+        res = res + i - arr[i]
+    return res
+
+print(sol2( arr))
