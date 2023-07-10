@@ -1,3 +1,5 @@
+# do again ! 
+
 def solution(nums):
     buy = 0
     sell = 1
@@ -18,7 +20,7 @@ def solution(nums):
 
 
 
-arr = [7,6,5,3,6,4]
+arr = [7,1,5,3,6,4]
 
 
 print(solution(arr))
