@@ -14,16 +14,26 @@ max , min no in an array
 
 def solution(nums):
 
-    ''' max min in an array '''
+    ''' best time to sell stock '''
     
-    sorted_arr = sorted(nums)
-    min_no = 0
-    max_no = len(sorted_arr)-1
+    buy = 0
+    sell = 1
+    curr = 0 
+    fin = 0
 
-    return f" min is {sorted_arr[min_no]} and the max is {sorted_arr[max_no]}  "
+    while sell < len(nums):
+        curr = nums[sell] - nums[buy]
 
+        if nums[buy] > nums[sell]:
+            buy = sell
+            # sell += 1
+        
+        fin = max(fin,curr)
+        sell += 1
 
-nums = [4,-3,978,1,99,12]     
+    return fin 
 
+# nums = [7,1,5,3,6,4] # ans -> 5 [ buy 1 , sell 6 ]     
+nums = [2,1,4]
 
 print(solution(nums))
