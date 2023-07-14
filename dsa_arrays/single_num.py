@@ -11,6 +11,6 @@ def solution(nums):
             # missing_list.append(i) # if more than a single number missing 
     # return missing_list # if more than a single number missing 
     
-nums = [1,2,3,4,5,6,6,5,2,1]
+nums = [1]
 
 print(solution(nums))
