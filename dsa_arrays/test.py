@@ -12,28 +12,21 @@ max , min no in an array
 '''
 
 
-def solution(nums):
+def solution(nums,m):
+    min_no = 0 
+    max_no = m-1
+    fin = 10000
+    sorted_nums= sorted(nums)
 
-    ''' best time to sell stock '''
-    
-    buy = 0
-    sell = 1
-    curr = 0 
-    fin = 0
+    while max_no < len(sorted_nums):
+        curr = sorted_nums[max_no] - sorted_nums[min_no]
 
-    while sell < len(nums):
-        curr = nums[sell] - nums[buy]
+        fin = min(fin,curr)
+        min_no+=1
+        max_no+=1
+    return fin
 
-        if nums[buy] > nums[sell]:
-            buy = sell
-            # sell += 1
-        
-        fin = max(fin,curr)
-        sell += 1
+nums = [12, 4, 7, 9, 2, 23, 25, 41, 30, 40, 28, 42, 30, 44, 48, 43, 50] 
+m = 7
 
-    return fin 
-
-# nums = [7,1,5,3,6,4] # ans -> 5 [ buy 1 , sell 6 ]     
-nums = [2,1,4]
-
-print(solution(nums))
+print(solution(nums,m))

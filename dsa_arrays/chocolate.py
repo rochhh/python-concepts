@@ -18,7 +18,7 @@ def solution(packets, students):
 
 
 
-packets = [3, 4, 1, 9, 56, 7, 9, 12] 
-students = 5
+packets = [12, 4, 7, 9, 2, 23, 25, 41, 30, 40, 28, 42, 30, 44, 48, 43, 50] 
+students = 7
 
 print(solution(packets,students)) 
