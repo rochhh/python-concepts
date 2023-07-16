@@ -1,7 +1,7 @@
 def solution(packets, students):
     sorted_packets = sorted(packets)
     i = 0
-    j = i + students - 1
+    j =  i + students - 1
     min_diff_overall = 10000
     while j < len(sorted_packets):
         min_chocolates = sorted_packets[i]

@@ -2,31 +2,45 @@
 To do -
 twosum
 missingNo
+moveZeroes
+
 
 Successful - 
 contains Duplicate 
 rev arr 
 anagram 
 max , min no in an array 
+chocolate distribution 
+
 
 '''
 
 
-def solution(nums,m):
-    min_no = 0 
-    max_no = m-1
-    fin = 10000
-    sorted_nums= sorted(nums)
+def solution(nums):
+    i = 0
+    j = 1
 
-    while max_no < len(sorted_nums):
-        curr = sorted_nums[max_no] - sorted_nums[min_no]
+    while j < len(nums):
 
-        fin = min(fin,curr)
-        min_no+=1
-        max_no+=1
-    return fin
+        if nums[i] == 0:
+            nums[i] , nums[j] = nums[j] , nums[i]
+            i+=1
+            j+=1
+            if j >= len(nums):
+                return nums
+        
+        if nums[i] == 0 and nums[j] == 0:
+            j+=1
+        
+        if nums[j] == 0:
+            nums[i] , nums[j] = nums[j] , nums[i]
+            i+=1
+        else:
+            i+=1
+            j+=1
+    return nums 
 
-nums = [12, 4, 7, 9, 2, 23, 25, 41, 30, 40, 28, 42, 30, 44, 48, 43, 50] 
-m = 7
+nums = [1,0] 
 
-print(solution(nums,m))
+
+print(solution(nums))
