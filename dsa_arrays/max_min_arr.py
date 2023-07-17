@@ -14,6 +14,14 @@ arr = [4,-3,978,1,99,12]
 print( solution(arr) )
 
 
+
+
+
+
+
+
+
+
 '''
 
 def solution(nums):
