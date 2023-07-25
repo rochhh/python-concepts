@@ -3,6 +3,7 @@ def count_sort(nums):
     count_arr = [0]*(k+1)
     sum = 0
     res = nums.copy()
+    
     # step 1 -> count the occ of nums[i] and add them in a new arr 
 
     for i in range(len(nums)):
@@ -21,6 +22,8 @@ def count_sort(nums):
     
     '''
     
+    step 3 ->
+
     Go to the nums[] from i = len(nums)-1
     then consider index , val here as 16(index) , 9(val)
     Goto the count_arr[] to the index 9 ,
@@ -40,8 +43,7 @@ def count_sort(nums):
     for index in range(len(nums)-1,-1,-1):
        count_arr[nums[index]] -= 1
        res[count_arr[nums[index]]] = nums[index]
-
-    return res
+    return f"the og arr -> {nums} and the result is \n -> {res} "
        
 nums = [2,1,1,0,2,5,4,0,2,8,7,7,9,2,0,1,9]
 print(count_sort(nums))
