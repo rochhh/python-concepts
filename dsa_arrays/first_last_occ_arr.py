@@ -1,36 +1,34 @@
-def soln(nums,target):
+def bin_search(nums,target,left_bias):
     
     start = 0
     end = len(nums)-1
-    
-    smallest = 0
-    largest = 0
-    
-    while start < end:
+    i = -1
+
+    while start <= end:
 
         mid = (start+end)//2
 
-        if target == nums[mid] and smallest == 0:
-            smallest = mid
-
-        if target == nums[mid] and largest == 0:
-            largest = mid 
-        
         if target > nums[mid]:
             start = mid + 1
-
-            if nums[start] == target:
-                smallest = start
-
+        
         if target < nums[mid]:
             end = mid - 1
 
-            if nums[end] == target:
-                largest = end
+        if target == nums[mid]:
+            i = mid
+            if left_bias:
+                end = mid - 1
+            else:
+                start = mid + 1
+    return i
 
-    return [-1,-1]
+
+def soln(nums,target):
+    left = bin_search(nums,target,True)
+    right = bin_search(nums,target,False)
+    return [left,right]
 
 
-nums = [5,7,7,8,8,10]
+nums = []
 target = 8
 print(soln(nums,target))
