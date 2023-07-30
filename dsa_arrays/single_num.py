@@ -14,3 +14,29 @@ def solution(nums):
 nums = [1]
 
 print(solution(nums))
+
+
+'''
+https://leetcode.com/problems/single-number/solutions/3528463/python-code-using-dictionary-explained-with-approach-and-time-complexity/
+
+
+def soln(nums):
+    
+    dic = {}
+    
+    for num in nums:
+        if num not in dic:
+            dic[num] = True
+        
+        else:
+            dic[num] = False
+        
+    for key , value in dic.items():
+        if value == True:
+            return key
+    
+nums= [2]
+
+print(soln(nums))
+
+'''

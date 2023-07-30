@@ -6,11 +6,12 @@ moveZeroes
 singleNumber 
 valid palindrome
 abs sorted integers (abs_sorted_integer_squared.py) done by me in 0(nlogn) can be done in o(n)
+
 rotated sorted array search 
 
 Successful - 
 
-twosum
+twosum (√)
 contains Duplicate 
 rev arr 
 anagram 
@@ -24,15 +25,10 @@ first last elem in a sorted array
 '''
 
 
-def soln(arr):
-    
-    len_n = len(arr)
-    res = len_n
-
-    for i in range(len_n):
-        res = res + i - arr[i]
-    return res
+def soln(nums):
+    pass
 
 
-nums= [3,0,1]
-print(soln(nums))
+nums= [4,5,6,7,0,1,2]
+target = 0
+print(soln(nums,target))
