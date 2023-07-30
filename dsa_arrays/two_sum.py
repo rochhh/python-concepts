@@ -14,3 +14,32 @@ def two_sum(arr ,target):
         hashmap[n] = i  
     
 print( two_sum(arr, target) )
+
+
+'''
+
+Done again ! 
+
+
+def soln(nums,target):
+    
+    hashmap = {}
+
+    for i in range(len(nums)):
+
+        diff = target - nums[i]
+
+        if target - diff in hashmap:
+            return [hashmap[target - diff] , i]
+        else:
+            hashmap[diff] = i
+    
+    return [-1,-1]
+
+
+nums= [3,3]
+target = 6
+print(soln(nums,target))
+
+
+'''
