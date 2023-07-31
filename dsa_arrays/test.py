@@ -15,7 +15,7 @@ twosum (√)
 contains Duplicate 
 rev arr 
 anagram 
-max , min no in an array 
+max , min no in an array (√)
 chocolate distribution 
 maximum subarray ( !!!! got wrong after prac again  !!! )
 stock (√)
@@ -26,20 +26,9 @@ first last elem in a sorted array
 
 
 def soln(nums):
-    buy = 0
-    sell = 1
-    profit = 0 
-    max_profit = 0
-    while sell < len(nums):
-        profit = nums[sell] - nums[buy]
-        max_profit = max(profit , max_profit)
+   pass
 
-        if nums[sell] < nums[buy]:
-            buy = sell
-        sell+=1
 
-    return max_profit
-
-nums= [7,6,5,4,3,2,1]
+nums= [-4,-3,0,1,10]
 
 print(soln(nums))
