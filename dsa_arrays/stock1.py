@@ -1,4 +1,4 @@
-# do again ! 
+
 
 def solution(nums):
     buy = 0
@@ -78,6 +78,30 @@ print(soln(nums))
 
 
 
+
+
+'''
+
+
+'''
+
+my new correct leetcode submission :->
+
+def ... :
+
+buy = 0
+sell = 1
+profit = 0 
+max_profit = 0
+while sell < len(prices):
+    profit = prices[sell] - prices[buy]
+    max_profit = max(profit , max_profit)
+
+    if prices[sell] < prices[buy]:
+        buy = sell
+    sell+=1
+
+return max_profit
 
 
 '''
