@@ -5,6 +5,9 @@ def func(x, n):
         n -= 1
     return res
 
+gres = 1 
+# global var ^ 
+
 def recursiveTaylor(x,n):
     
     res = 1
@@ -12,7 +15,7 @@ def recursiveTaylor(x,n):
     if n ==0:
         return res
 
-    res = 1 + (x/n) * res
+    gres = 1 + (x/n) * gres
 
     return recursiveTaylor(x,n-1) 
 
